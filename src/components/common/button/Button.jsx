@@ -1,7 +1,8 @@
-const Button = ({ buttonName, onClick }) => (
-    <button onClick={onClick}>
+const Button = ({ buttonName, onClick, ...props }) => (
+    <div onClick={onClick} {...props}>
         {buttonName}
-    </button>
+    </div>
 );
 
 export default Button;
+
