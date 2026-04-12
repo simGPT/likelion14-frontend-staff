@@ -28,6 +28,7 @@ const Button = styled.div`
     font-size: 13px;
     font-family: Pretendard;
     font-weight: 400;
+    margin-top: 9px;
 `;
 
 const HeaderRight = styled.div`
