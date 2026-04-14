@@ -1,0 +1,111 @@
+import item1 from "../../assets/images/item1.png";
+import item2 from "../../assets/images/item2.png";
+import item3 from "../../assets/images/item3.png";
+
+export const itemData = [
+  {
+    itemId:1,
+    imageUrl: item1,
+    name: "아이앱 스튜디오 25 후드 라이트 그레이",
+    price: "145,000원",
+    reviewCount: "1,561",
+  },
+  {
+    itemId:2,
+    imageUrl: item2,
+    name: "아이앱 스튜디오 25 후드 라이트 블루",
+    price: "145,000원",
+    reviewCount: "1,732",
+  },
+  {
+    itemId:3,
+    imageUrl: item3,
+    name: "아디다스 블랙져지 2016",
+    price: "255,000원",
+    reviewCount: "781",
+  },
+  {
+    itemId:4,
+    imageUrl: item1,
+    name: "아이앱 스튜디오 25 후드 라이트 그레이",
+    price: "145,000원",
+    reviewCount: "1,561",
+  },
+  {
+    itemId:5,
+    imageUrl: item2,
+    name: "아이앱 스튜디오 25 후드 라이트 블루",
+    price: "145,000원",
+    reviewCount: "1,732",
+  },
+  {
+    itemId:6,
+    imageUrl: item3,
+    name: "아디다스 블랙져지 2016",
+    price: "255,000원",
+    reviewCount: "781",
+  },
+  {
+    itemId:7,
+    imageUrl: item1,
+    name: "아이앱 스튜디오 25 후드 라이트 그레이",
+    price: "145,000원",
+    reviewCount: "1,561",
+  },
+  {
+    itemId:8,
+    imageUrl: item2,
+    name: "아이앱 스튜디오 25 후드 라이트 블루",
+    price: "145,000원",
+    reviewCount: "1,732",
+  },
+  {
+    itemId:9,
+    imageUrl: item3,
+    name: "아디다스 블랙져지 2016",
+    price: "255,000원",
+    reviewCount: "781",
+  },
+  {
+    itemId:10,
+    imageUrl: item1,
+    name: "아이앱 스튜디오 25 후드 라이트 그레이",
+    price: "145,000원",
+    reviewCount: "1,561",
+  },
+  {
+    itemId:11,
+    imageUrl: item2,
+    name: "아이앱 스튜디오 25 후드 라이트 블루",
+    price: "145,000원",
+    reviewCount: "1,732",
+  },
+  {
+    itemId:12,
+    imageUrl: item3,
+    name: "아디다스 블랙져지 2016",
+    price: "255,000원",
+    reviewCount: "781",
+  },
+  {
+    itemId:13,
+    imageUrl: item1,
+    name: "아이앱 스튜디오 25 후드 라이트 그레이",
+    price: "145,000원",
+    reviewCount: "1,561",
+  },
+  {
+    itemId:14,
+    imageUrl: item2,
+    name: "아이앱 스튜디오 25 후드 라이트 블루",
+    price: "145,000원",
+    reviewCount: "1,732",
+  },
+  {
+    itemId:15,
+    imageUrl: item3,
+    name: "아디다스 블랙져지 2016",
+    price: "255,000원",
+    reviewCount: "781",
+  },
+];
