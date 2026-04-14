@@ -28,6 +28,7 @@ const Button = styled.div`
     font-family: Pretendard;
     font-weight: 400;
     margin-top: 9px;
+    cursor: pointer;
 `;
 
 const HeaderRight = styled.div`
@@ -47,7 +48,7 @@ export default function Header(){
     return(
         <div>
             <HeaderContainer>
-                <LogoImage src={logoUrl}/>
+                <LogoImage src={logoUrl} onClick={()=>navigate("/")}/>
                 <HeaderRight>
                     {pathname === "/" && (
                         <Button onClick={()=>navigate("/add")}>{buttonName}</Button>

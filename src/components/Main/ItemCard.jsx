@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const CardContainer = styled.div`
@@ -50,9 +51,12 @@ const ReviewCount = styled.p`
     margin: 0;
 `;
 
-export default function ItemCard({ image, name, price, reviewCount }) {
+export default function ItemCard({ itemId,image, name, price, reviewCount }) {
+    const navigate=useNavigate();
+
+
     return (
-        <CardContainer>
+        <CardContainer onClick={()=>navigate(`/item/${itemId}`)}>
             <ImageWrapper>
                 <ProductImage src={image} alt={name} />
             </ImageWrapper>

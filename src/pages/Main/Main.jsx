@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import ItemCard from "../../components/Main/ItemCard";
 import OptionTogle from "../../components/Main/OptionTogle";
-import item1 from "../../assets/images/item1.png"
 import sortIcon from "../../assets/icons/sort_icon.png"
 import { useState } from "react";
+
+import { itemData } from "../../components/Main/itemDummy";
 
 export default function Main() {
     const [sortOpen,setSortOpen]=useState(false);
@@ -31,12 +32,14 @@ export default function Main() {
         )}
       </SortWrapper>
       <ItemContainer>
-        {[...Array(10)].map(() => (
+        {itemData.map((data,index) => (
           <ItemCard
-            image={item1}
-            name="아이앱 스튜디오 25 후드 라이트 그레이"
-            price="145,000원"
-            reviewCount="1,561"
+            key={index}
+            itemId={data.itemId}
+            image={data.imageUrl}
+            name={data.name}
+            price={data.price}
+            reviewCount={data.reviewCount}
           />
         ))}
       </ItemContainer>
