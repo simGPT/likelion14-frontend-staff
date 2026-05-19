@@ -2,12 +2,25 @@ import styled from "styled-components";
 import ItemCard from "../../components/Main/ItemCard";
 import OptionTogle from "../../components/Main/OptionTogle";
 import sortIcon from "../../assets/icons/sort_icon.png"
-import { useState } from "react";
-
-import { itemData } from "../../components/Main/itemDummy";
+import { useEffect, useState } from "react";
+import { getItems } from "../../api/shop";
 
 export default function Main() {
     const [sortOpen,setSortOpen]=useState(false);
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+      let cancelled = false;
+      (async () => {
+        try {
+          const res = await getItems("clothes");
+          if (!cancelled) setItems(Array.isArray(res) ? res : []);
+        } catch {
+          if (!cancelled) setItems([]);
+        }
+      })();
+      return () => { cancelled = true; };
+    }, []);
 
   return (
     <Container>
@@ -32,14 +45,14 @@ export default function Main() {
         )}
       </SortWrapper>
       <ItemContainer>
-        {itemData.map((data,index) => (
+        {items.map((item) => (
           <ItemCard
-            key={index}
-            itemId={data.itemId}
-            image={data.imageUrl}
-            name={data.name}
-            price={data.price}
-            reviewCount={data.reviewCount}
+            key={item.id}
+            itemId={item.id}
+            image={item.image}
+            name={item.name}
+            price={`${Number(item.price).toLocaleString()}원`}
+            reviewCount={item.reviews}
           />
         ))}
       </ItemContainer>
